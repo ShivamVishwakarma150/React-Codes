@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array with Lesser Value</title>
+    <script>
+        let person=["Gagan", ,50000];
+        // let name=person[0];
+        // let age=person[1];
+        // let sal=person[2];
+        let [name,age=21,sal]=person;
+        document.write("Name : "+name+"<br>");
+        document.write("Age : "+age+"<br>");
+        document.write("Sal : "+sal+"<br>"); //Gives Undefined
+
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array with Lesser Value</title>
+    <script>
+        let person=["Gagan", ,50000,["btech","MBA","Phd"]];
+        // let name=person[0];
+        // let age=person[1];
+        // let sal=person[2];
+        let [name,age=21,sal,[deg1,deg2,deg3]]=person;
+        document.write("Name : "+name+"<br>");
+        document.write("Age : "+age+"<br>");
+        document.write("Sal : "+sal+"<br>"); 
+        document.write("Degree 1: "+deg1+"<br>");
+        document.write("Degree 2 : "+deg2+"<br>");
+        document.write("Degree 3 : "+deg3+"<br>"); 
+
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
