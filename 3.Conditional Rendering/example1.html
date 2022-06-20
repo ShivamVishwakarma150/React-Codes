@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Using React With CDN</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function GetNumber() {
+        const myyArr = [10, 5, 12, 6, 9, 21, 34, 7, 91, 23];
+        let number = myyArr[Math.trunc(Math.random() * myyArr.length)];
+        return number;
+      }
+      function MyNum() {
+        const num = GetNumber();
+        return (
+          <div>
+            <p>Number is {num}</p>
+            <small>It is an :- {(num%2 == 0) ? "Even" : "Odd"} Number</small>
+          </div>
+        );
+      }
+      let myDiv = document.querySelector("#root");
+      ReactDOM.render(<MyNum />, myDiv);
+    </script>
+  </body>
+</html>

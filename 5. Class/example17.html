@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Priivate Memeber</title>
+    <script>
+      class Demo{
+        a;
+        #b; // for private it must be declare then use it
+        constructor(a,b){
+            this.a=a;
+            this.#b=b;
+        }
+        show(){
+            document.write(this.a+" , "+this.#b);
+        }
+      }
+      let obj=new Demo(5,7);
+      obj.show();
+      
+
+    </script>
+  </head>
+  <body></body>
+</html>

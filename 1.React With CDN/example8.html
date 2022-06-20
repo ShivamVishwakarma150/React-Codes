@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+    <title>Using React With CDN</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyApp() {
+        let myHeading = React.createElement(
+          "div",
+          null,
+          React.createElement("h1", null, "Contact List"),
+          React.createElement(
+            "ul",
+            null,
+            React.createElement("li", null, "Mr. Shivam Vishwakarma"),
+            React.createElement("li", null, "Mr. Abhishek Mishra"),
+            React.createElement("li", null, "Mr. Gunjan Karn")
+          )
+        );
+
+        return myHeading;
+      }
+
+      ReactDOM.render(
+        React.createElement(MyApp),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

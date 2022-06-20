@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Demo1</title>
+    <script>
+      class Emp {
+        static companyName="Google";
+        constructor(name,salary){
+            this.name=name;
+            this.salary=salary;
+        }
+       
+      }
+      let e1 = new Emp("Amit",40000);
+      let e2 = new Emp("Shivam",50000);
+      document.write(e1.name + "," + e1.salary+","+Emp.companyName);
+      document.write("<br>");
+      document.write(e2.name + "," + e2.salary+","+Emp.companyName);
+      document.write("<br>");
+      Emp.companyName="Amazon";
+      document.write(e1.name + "," + e1.salary+","+Emp.companyName);
+      document.write("<br>");
+      document.write(e2.name + "," + e2.salary+","+Emp.companyName);
+    </script>
+  </head>
+  <body></body>
+</html>
