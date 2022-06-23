@@ -2,22 +2,18 @@ class Course extends React.Component {
   render() {
     // here props is instance member se we access using this
 
-    const {name,titles}=this.props;
-    let sub=[];
-    titles.forEach(s=>{
+    const { name, titles } = this.props;
+    let sub = [];
+    titles.forEach((s) => {
       sub.push(<li>{s}</li>);
-    })
+    });
     return (
-      
-       
-       <div>
+      <div>
         <p>Course Name :{name}</p>
-        <p><ul>{sub}</ul></p>
-       </div>
-
-
-
-     
+        
+          <ul>{sub}</ul>
+        
+      </div>
     );
   }
 }
