@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Fruits from "./Fruits";
+import React, { Component } from 'react';
+import Myself from './Myself';
 class App extends Component{
   render(){
     return(
       <div>
-        <Fruits/>
+        <Myself/>
       </div>
     );
   }
