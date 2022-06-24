@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import "./App.css";
-import Myself from './Myself';
+import Clock from './Clock';
+
 class App extends Component{
   render(){
     return(
       <div>
-        <Myself/>
-        <h2>I am outside Myself </h2>
+        <Clock/>
+       
       </div>
     );
   }
+
 }
+
 
 export default App;

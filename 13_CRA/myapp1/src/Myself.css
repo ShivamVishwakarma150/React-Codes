@@ -1,0 +1,8 @@
+.Myself{
+    border: 2px solid purple;
+    width: 300px;
+    border-radius: 20px;
+}
+.Myself h2{
+    color: goldenrod;
+}

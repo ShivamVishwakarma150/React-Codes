@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import "./App.css";
-import Myself from './Myself';
+import Student1 from './Student1';
+
 class App extends Component{
   render(){
     return(
       <div>
-        <Myself/>
-        <h2>I am outside Myself </h2>
+        <Student1/>
       </div>
-    );
+    )
   }
+
 }
+
 
 export default App;

@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import "./App.css";
-import Myself from './Myself';
+import ShoppingCart from './ShoppingCart';
+
 class App extends Component{
   render(){
     return(
       <div>
-        <Myself/>
-        <h2>I am outside Myself </h2>
+        
+        <ShoppingCart items={["One Plus-Mobile","Fast Track-Watch"]}/>
       </div>
     );
   }
+
 }
+
 
 export default App;
