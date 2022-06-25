@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import Clock from './Clock';
-
-class App extends Component{
-  render(){
-    return(
+import React, { Component } from "react";
+import Hello from "./Hello";
+class App extends Component {
+  render() {
+    return (
       <div>
-        <Clock/>
-       
+        <Hello />
       </div>
     );
   }
-
 }
-
 
 export default App;
