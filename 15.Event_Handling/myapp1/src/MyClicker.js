@@ -8,28 +8,39 @@ class MyClicker extends Component {
   //kyuki cunstructor ek hi bar chalega
   constructor(props) {
     super(props);
-    this.state = { num: 1 };
+    this.state = { counter: 1 };
 
-    this.genRandom = this.genRandom.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleTripleClick = this.handleTripleClick.bind(this);
   }
-  genRandom() {
-    let randNum = Math.trunc(Math.random() * 10) + 1;
-    this.setState({ num: randNum });
+  handleClick(e) {
+    this.setState({ counter: this.state.counter + 1 });
   }
-
+  // we use it when we perform calculation based on previous calculation
+  // this is facebook first recommendation
+  increment(currentstate) {
+    return { counter: currentstate.counter + 1 };
+  }
+  handleTripleClick(e) {
+    // this.setState(this.increment);
+    // this.setState(this.increment);
+    // this.setState(this.increment);
+    this.setState((currentstate)=>{
+        return { counter: currentstate.counter + 1 };
+    });
+    this.setState((currentstate)=>{
+        return { counter: currentstate.counter + 1 };
+    });
+    this.setState((currentstate)=>{
+        return { counter: currentstate.counter + 1 };
+    });
+  }
   render() {
     return (
       <div>
-        <h2>Current random num is : {this.state.num}</h2>
-        <h3>
-          {this.state.num !== 6 ? 
-          (
-            <button onClick={this.genRandom}>Generate New Number</button>
-          ) :
-        (
-            <p>You win</p>
-          )}
-        </h3>
+        <h2>Couter is {this.state.counter}</h2>
+        <button onClick={this.handleClick}>Click Me</button>
+        <button onClick={this.handleTripleClick}>Click Me</button>
       </div>
     );
   }
